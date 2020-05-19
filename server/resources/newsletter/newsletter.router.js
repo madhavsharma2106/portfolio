@@ -3,4 +3,7 @@ const router = Router();
 
 const { addSubscriberToNewsLetter } = require("./newsletter.controller");
 
-router.route("/").post(addSubscriberToNewsLetter());
+//api/newsletter
+router.route("/").post(addSubscriberToNewsLetter);
+
+module.exports = router;
