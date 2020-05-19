@@ -1,5 +1,10 @@
 const NewsLetter = require("./newsletter.model");
 
+function validateEmail(emailId) {
+  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(emailId).toLowerCase());
+}
+
 const addSubscriberToNewsLetter = async (req, res) => {
   const emailId = req.body.emailId;
 
@@ -25,9 +30,13 @@ const addSubscriberToNewsLetter = async (req, res) => {
   }
 };
 
-function validateEmail(emailId) {
-  var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return re.test(String(emailId).toLowerCase());
-}
+const getAllSubscribers = async (req, res) => {
+  try {
+    const subscribers = await NewsLetter.find().exec();
+    res.status(200).json(subscribers);
+  } catch (error) {
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+};
 
-module.exports = { addSubscriberToNewsLetter };
+module.exports = { addSubscriberToNewsLetter, getAllSubscribers };
