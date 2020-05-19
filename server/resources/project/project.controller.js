@@ -1,0 +1,24 @@
+const Project = require("./project.model");
+
+const createProject = async (req, res) => {
+  const { body } = req;
+  try {
+    const response = await Project.create(body);
+    return res.status(200).json(response);
+  } catch (err) {
+    console.error(err);
+    if (err.name === "ValidationError")
+      return res.status(400).json(err.message);
+
+    if (err.code === 11000) {
+      const key = Object.keys(err.keyValue);
+      const value = err.keyValue[key];
+      return res
+        .status(400)
+        .json({ message: `The ${key}: ${value} already exists ` });
+    }
+    return res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+
+module.exports = { createProject };
