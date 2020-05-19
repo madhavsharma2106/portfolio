@@ -40,7 +40,7 @@ const getFeaturedProjects = async (req, res) => {
 
 const getAllProjects = async (req, res) => {
   try {
-    const featuredProjects = await Project.find().select([
+    const projects = await Project.find().select([
       "title",
       "_id",
       "catchLine",
@@ -48,11 +48,27 @@ const getAllProjects = async (req, res) => {
       "readTime",
       "link",
     ]);
-    res.status(200).json(featuredProjects);
+    res.status(200).json(projects);
   } catch (err) {
     console.log(err);
     return res.status(500).json({ message: "Internal Server Error" });
   }
 };
 
-module.exports = { createProject, getFeaturedProjects, getAllProjects };
+const getProjectById = async (req, res) => {
+  const id = req.params.id;
+  try {
+    const project = await Project.findById(id);
+    res.status(200).json(project);
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json({ message: "Internal Server Error" });
+  }
+};
+
+module.exports = {
+  createProject,
+  getFeaturedProjects,
+  getAllProjects,
+  getProjectById,
+};
