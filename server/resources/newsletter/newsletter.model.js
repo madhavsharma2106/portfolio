@@ -14,4 +14,4 @@ const newsLetterSchema = new mongoose.Schema(
   }
 );
 
-module.exports = mongoose.model("newsletter", newsLetterSchema);
+module.exports = mongoose.model("NewsLetter", newsLetterSchema);
