@@ -1,4 +1,5 @@
 const { Router } = require("express");
+const { protect } = require("../../utils/auth");
 const router = Router();
 
 const {
@@ -9,7 +10,8 @@ const {
 } = require("./project.controller");
 
 // api/project
-router.route("/").post(createProject).get(getAllProjects);
+router.route("/").get(getAllProjects);
+router.post("/", protect, createProject);
 
 // api/project/featured
 router.route("/featured").get(getFeaturedProjects);
