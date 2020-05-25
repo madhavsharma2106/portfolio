@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "popins";
+  src: url(../assets/fonts/Poppins-Regular.ttf) format("truetype") regular,
+    url(../assets/fonts/Poppins-Bold.ttf) format("truetype") bold,
+    url(../assets/fonts/Poppins-Light.ttf) format("truetype") light,
+    url(../assets/fonts/Poppins-Medium.ttf) format("truetype") medium,
+    url(../assets/fonts/Poppins-SemiBold.ttf) format("truetype") semibold;
+}
+
+@font-face {
+  font-family: "helvetica";
+  src: url(../assets/fonts/HelveticaNeueBold.ttf) format("truetype") bold,
+    url(../assets/fonts/HelveticaNeue.ttf) format("truetype") regular;
+}
+
+$primary-font-regular: "popins", regular;
+$primary-font-bold: "popins", bold;
+$primary-font-light: "popins", light;
+$primary-font-medium: "popins", medium;
+$primary-font-semibold: "popins", semibold;
+$secondary-font-regular: "helvetica", regular;
+$secondary-font-bold: "helvetica", bold;
