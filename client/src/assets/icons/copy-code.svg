@@ -1,0 +1,10 @@
+<svg id="Copy_Code" data-name="Copy Code" xmlns="http://www.w3.org/2000/svg" width="43" height="37.751" viewBox="0 0 43 37.751">
+  <g id="Icon" transform="translate(15.928 20.001)">
+    <rect id="Rectangle-path" width="11" height="11" rx="2" stroke-width="1.5" transform="translate(6.072 6)" stroke="#5a5a5a" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <path id="Shape" d="M2.521,10.924h-.84A1.681,1.681,0,0,1,0,9.243V1.681A1.681,1.681,0,0,1,1.681,0H9.243a1.681,1.681,0,0,1,1.681,1.681v.84" transform="translate(0 0)" fill="none" stroke="#5a5a5a" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" fill-rule="evenodd"/>
+  </g>
+  <g id="Group_29" data-name="Group 29" transform="translate(-1107 -2360.999)" opacity="0">
+    <path id="Union_7" data-name="Union 7" d="M-7227.856-2717h4.842l-2.174,4.233Zm-20.144,0v-14h43v14Z" transform="translate(8355 5092)" fill="#f26b00"/>
+    <text id="Copy_code-2" data-name="Copy code" transform="translate(1110 2370)" fill="#fff" font-size="8" font-family="SofiaProMedium, Sofia Pro" letter-spacing="-0.01em"><tspan x="0" y="0">Copy code</tspan></text>
+  </g>
+</svg>
