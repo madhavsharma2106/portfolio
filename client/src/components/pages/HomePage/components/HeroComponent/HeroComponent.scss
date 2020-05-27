@@ -1,0 +1,12 @@
+@import "../../../../../styles/main.scss";
+
+.hero-component-wrapper {
+  background-color: $teal-green;
+  height: 768px;
+
+  .hero-text {
+    padding-top: 260px;
+    display: flex;
+    justify-content: space-around;
+  }
+}

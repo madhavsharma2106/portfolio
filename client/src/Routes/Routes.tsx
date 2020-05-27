@@ -5,7 +5,7 @@ import {
   Route,
   RouteProps,
 } from "react-router-dom";
-import HomePage from "../pages/HomePage/HomePage";
+import HomePage from "../components/pages/HomePage/HomePage";
 
 const routes: RouteProps[] = [{ path: "/", component: HomePage }];
 

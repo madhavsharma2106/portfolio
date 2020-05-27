@@ -1,6 +1,5 @@
 import React from "react";
-import "./App.scss";
-import { Routes } from "./components/Routes/Routes";
+import { Routes } from "./Routes/Routes";
 
 function App() {
   return <Routes />;
