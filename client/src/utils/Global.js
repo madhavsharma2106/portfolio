@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 import { normalize } from "polished";
 import { primaryFont } from "./typography";
 
-export default createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
 ${normalize()}
 @font-face {
     font-family: "popins";
@@ -28,7 +28,6 @@ ${normalize()}
   }
   body {
     margin: 0;
-    padding: 65px 0 0;
     font-family: ${primaryFont}
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
