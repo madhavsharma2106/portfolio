@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { applyStyleModifiers } from "styled-components-modifiers";
 import {
   typeScale,
   primaryFont,
@@ -6,7 +7,6 @@ import {
   white,
   tealGreen,
 } from "../../../utils/index";
-import { applyStyleModifiers } from "styled-components-modifiers";
 
 export const PRIMARY_BUTTON_MODIFIERS = {};
 
