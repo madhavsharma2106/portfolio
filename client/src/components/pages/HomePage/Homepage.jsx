@@ -1,6 +1,6 @@
 import React from "react";
 import Page from "../../molecules/Page";
-import HeroComponent from "./components/HeroComponent";
+import HeroComponent from "./components/HeroComponent/HeroComponent";
 function HomePage() {
   return (
     <Page

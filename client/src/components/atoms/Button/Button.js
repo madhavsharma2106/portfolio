@@ -6,9 +6,9 @@ import {
   orange,
   white,
   tealGreen,
+  enableMarginProps,
+  enablePaddingProps,
 } from "../../../utils/index";
-
-export const PRIMARY_BUTTON_MODIFIERS = {};
 
 const Button = styled.button`
   padding: 14px 60px;
@@ -19,6 +19,8 @@ const Button = styled.button`
   color: ${white[100]};
   border: 1px solid transparent;
   transition: background-color 0.07s linear, color 0.07s linear;
+  ${enableMarginProps}
+  ${enablePaddingProps}
 `;
 
 export const PrimaryButton = styled(Button)`
@@ -29,7 +31,6 @@ export const PrimaryButton = styled(Button)`
     color: ${orange[100]};
     border-color: ${orange[100]};
   }
-  ${applyStyleModifiers(PRIMARY_BUTTON_MODIFIERS)};
 `;
 
 export const SECONDARY_BUTTON_MODIFIERS = {

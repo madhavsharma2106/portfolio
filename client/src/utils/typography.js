@@ -1,4 +1,4 @@
-export const primaryFont = '"popins", monospace';
+export const primaryFont = `'Poppins', sans-serif`;
 export const secondaryFont = '"helvetica", monospace';
 
 export const typeScale = {

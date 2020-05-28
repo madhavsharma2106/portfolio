@@ -1,31 +1,27 @@
 import styled from "styled-components";
-import { applyStyleModifiers } from "styled-components-modifiers";
-import {
-  primaryFont,
-  white,
-  black,
-  secondaryFont,
-  tealGreen,
-  orange,
-} from "../../../utils";
+import { primaryFont, black, secondaryFont } from "../../../utils";
 
-export const TEXT_BUTTON_MODIFIERS = {};
+export const TextAlignVariants = {
+  left: "left",
+  right: "right",
+  center: "center",
+};
 
-export const ColorVariant = {
-  grey: black[300],
-  secondaryBlack: black[200],
-  black: black[100],
-  orange: orange[100],
-  tealGreen: tealGreen[100],
-  white: white[100],
+export const FontWeightVariants = {
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
 };
 
 export const Text = styled.p`
   font-family: ${({ secondary }) => (secondary ? secondaryFont : primaryFont)};
-  color: ${black[100]};
   font-size: ${({ size = 16 }) => `${size}px`};
-  text-decoration: ${({ underline }) => (underline ? "underline" : "none")};
-  display: ${({ inline }) => (inline ? "inline" : "block")};
+  text-decoration: ${({ underlined }) => underlined && "underline"};
+  display: ${({ inline }) => inline && "inline"};
   font-weight: ${({ weight }) => weight};
-  color: ${({ color = ColorVariant.black }) => color};
+  line-height: ${({ lineHeight }) => lineHeight};
+  text-align: ${({ textAlign }) => textAlign};
+  color: ${({ color = black[100] }) => color};
 `;
