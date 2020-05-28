@@ -1,24 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  PrimaryButton,
+  SecondaryButton,
+  TertialryButton,
+} from "../src/components/atoms/Button/Button";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <PrimaryButton>Hello</PrimaryButton>
+      <SecondaryButton modifiers="tealText">Hello</SecondaryButton>
+      <SecondaryButton>Hello</SecondaryButton>
+      <TertialryButton>Hello</TertialryButton>
     </div>
   );
 }
