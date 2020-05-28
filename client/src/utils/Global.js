@@ -33,8 +33,5 @@ ${normalize()}
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  main {
-    width: 90%;
-    margin: 0 auto;
-  }
+  
 `;
