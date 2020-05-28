@@ -15,7 +15,7 @@ import { tealGreen, white, Container } from "../../../../../utils";
 import Icon from "../../../../atoms/Icon/Icon";
 function HeroComponent() {
   return (
-    <Div backgroundColor={tealGreen[100]} height="768">
+    <Div backgroundColor={tealGreen[100]}>
       <Container>
         <Div
           flex
@@ -59,6 +59,7 @@ function HeroComponent() {
           justifyContent={JustifyContentVariants.spaceBetween}
           alignItems={AlignItemsVariants.center}
           marginTop={30}
+          paddingBottom={100}
         >
           <Div>
             <Icon />
