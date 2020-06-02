@@ -1,7 +1,7 @@
 import React from "react";
 import NewsLetterComponent from "./NewsLetterComponent/NewsLetterComponent";
 import { Container, black, orange, white } from "../../../utils";
-import { Div, Text, TextAlignVariants, H1 } from "../../atoms";
+import { Div, Text, TextAlignVariants, H1, Icon } from "../../atoms";
 
 function Footer() {
   return (
@@ -29,10 +29,12 @@ function Footer() {
                   </Text>
                 </Div>
                 <Div flexSize={1}>
-                  <Text color={orange[100]}>Social Media</Text>
-                  <Text color={white[100]} marginTop="20">
-                    (+91) 7022629939
+                  <Text color={orange[100]} marginBottom="19">
+                    Social Media
                   </Text>
+                  <Icon />
+                  <Icon />
+                  <Icon />
                 </Div>
               </Div>
             </Div>

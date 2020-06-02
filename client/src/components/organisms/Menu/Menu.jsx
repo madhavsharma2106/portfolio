@@ -25,17 +25,25 @@ function Menu({ backgroundColor }) {
               lineHeight="0.92"
               letterSpacing="0.52"
             >
-              MADHAV SHARMA
+              <Link secondary to="/">
+                MADHAV SHARMA
+              </Link>
             </H2>
           </Div>
           <Div
             flexSize="1"
             flex
-            justifyContent={JustifyContentVariants.spaceAround}
+            justifyContent={JustifyContentVariants.spaceBetween}
           >
-            <Link to="/projects">Projects</Link>
-            <Link to="/projects">Projects</Link>
-            <Link to="/projects">Projects</Link>
+            <Link secondary to="/projects">
+              Projects
+            </Link>
+            <Link secondary to="/projects">
+              Projects
+            </Link>
+            <Link secondary to="/projects">
+              Projects
+            </Link>
           </Div>
         </Div>
       </Container>

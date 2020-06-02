@@ -61,9 +61,9 @@ function HeroComponent() {
           paddingBottom={100}
         >
           <Div>
-            <Icon />
-            <Icon />
-            <Icon />
+            <Icon marginRight="16" />
+            <Icon marginRight="16" />
+            <Icon marginRight="16" />
           </Div>
           <Div>
             <PrimaryButton marginRight="16">Download Resume</PrimaryButton>
