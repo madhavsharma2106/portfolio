@@ -42,6 +42,7 @@ export const enableWidthProps = ({ width }) =>
 export const Container = styled.div`
   width: 1173px;
   margin: 0 auto;
+  background-color: ${({ backgroundColor }) => backgroundColor};
   ${enableMarginProps}
   ${enablePaddingProps}
 `;

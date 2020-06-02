@@ -38,6 +38,7 @@ export const textStyles = css`
   display: ${({ inline }) => inline && "inline"};
   font-weight: ${({ weight }) => weight};
   line-height: ${({ lineHeight }) => lineHeight};
+  letter-spacing: ${({ letterSpacing }) => letterSpacing};
   text-align: ${({ align }) => align};
   color: ${({ color }) => color};
   flex: ${({ flexSize }) => flexSize};
@@ -65,5 +66,4 @@ export const H2 = styled.h2`
 export const H3 = styled.h3`
   ${textStyles}
   font-size: ${({ size = 22 }) => `${size}px`};
-
 `;

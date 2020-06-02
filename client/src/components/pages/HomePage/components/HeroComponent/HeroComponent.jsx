@@ -13,7 +13,7 @@ import {
 import { tealGreen, white, Container } from "../../../../../utils";
 function HeroComponent() {
   return (
-    <Div backgroundColor={tealGreen[100]} paddingTop="200">
+    <Div backgroundColor={tealGreen[100]} paddingTop="120">
       <Container>
         <Div
           flex
