@@ -1,8 +1,4 @@
-import styled from "styled-components";
-export const Container = styled.div`
-  width: 1173px;
-  margin: 0 auto;
-`;
+import styled, { css } from "styled-components";
 
 export const enableMarginProps = ({
   marginTop,
@@ -10,13 +6,13 @@ export const enableMarginProps = ({
   marginLeft,
   marginRight,
   margin,
-}) => `
-    margin-top: ${marginTop && marginTop}px;
-    margin-bottom: ${marginBottom && marginBottom}px;
-    margin-left: ${marginLeft && marginLeft}px;
-    margin-right:  ${marginRight && marginRight}px;
-    margin: ${margin && margin};
-  `;
+}) => css`
+  margin-top: ${marginTop && marginTop + "px"};
+  margin-bottom: ${marginBottom && marginBottom + "px"};
+  margin-left: ${marginLeft && marginLeft + "px"};
+  margin-right: ${marginRight && marginRight + "px"};
+  margin: ${margin && margin};
+`;
 
 export const enablePaddingProps = ({
   paddingTop,
@@ -24,10 +20,30 @@ export const enablePaddingProps = ({
   paddingLeft,
   paddingRight,
   padding,
-}) => `
-      padding-top: ${paddingTop && paddingTop}px;
-      padding-bottom: ${paddingBottom && paddingBottom}px;
-      padding-left: ${paddingLeft && paddingLeft}px;
-      padding-right:  ${paddingRight && paddingRight}px;
-      padding: ${padding && padding};
-    `;
+}) => css`
+  padding-top: ${paddingTop && paddingTop + "px"};
+  padding-bottom: ${paddingBottom && paddingBottom + "px"};
+  padding-left: ${paddingLeft && paddingLeft + "px"};
+  padding-right: ${paddingRight && paddingRight + "px"};
+  padding: ${padding && padding};
+`;
+
+export const checkIfPercentageOrPixel = (val) => {
+  if (val[val.length - 1] === "%") return val;
+  return `${val}px`;
+};
+
+export const enableHeightProps = ({ height }) =>
+  height && `height: ${checkIfPercentageOrPixel(height)};`;
+
+export const enableWidthProps = ({ width }) =>
+  width && `width: ${checkIfPercentageOrPixel(width)};`;
+
+export const Container = styled.div`
+  width: 1173px;
+  margin: 0 auto;
+  ${enableMarginProps}
+  ${enablePaddingProps}
+`;
+
+export const enablePointer = ({ pointer }) => pointer && `cursor: pointer;`;

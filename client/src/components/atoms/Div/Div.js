@@ -1,5 +1,11 @@
 import styled from "styled-components";
-import { enableMarginProps, enablePaddingProps } from "../../../utils";
+import {
+  enableMarginProps,
+  enablePaddingProps,
+  enableHeightProps,
+  enableWidthProps,
+  enablePointer,
+} from "../../../utils";
 
 const baseStyles1 = {
   flexEnd: "flex-end",
@@ -19,13 +25,22 @@ export const AlignItemsVariants = {
   ...baseStyles1,
 };
 
+export const FlexDirectionVariants = {
+  row: "row",
+  column: "column",
+};
+
 export const Div = styled.div`
+  color: ${({ color }) => color};
   display: ${({ flex }) => flex && "flex"};
   justify-content: ${({ justifyContent }) => justifyContent};
   align-items: ${({ alignItems }) => alignItems};
-  width: ${({ width }) => width && `${width}px`};
-  height: ${({ height }) => height && `${height}px`};
   background-color: ${({ backgroundColor }) => backgroundColor};
   ${enablePaddingProps}
   ${enableMarginProps}
+  ${enableHeightProps}
+  ${enableWidthProps}
+  ${enablePointer}
+  flex: ${({ flexSize }) => flexSize};
+  flex-direction: ${({ flexDirection }) => flexDirection};
 `;

@@ -21,6 +21,7 @@ const Button = styled.button`
   transition: background-color 0.07s linear, color 0.07s linear;
   ${enableMarginProps}
   ${enablePaddingProps}
+  margin:${({ centered }) => centered && `0 auto`};
 `;
 
 export const PrimaryButton = styled(Button)`
@@ -60,7 +61,7 @@ export const SecondaryButton = styled(Button)`
 
 export const TERTIARY_BUTTON_MODIFIERS = {};
 
-export const TertialryButton = styled(Button)`
+export const TertiaryButton = styled(Button)`
   background-color: transparent;
   color: ${orange[100]};
 

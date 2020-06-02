@@ -1,18 +1,16 @@
 import React from "react";
 import {
-  Text,
-  TextAlignVariants,
-  FontWeightVariants,
-} from "../../../../atoms/Text/Text";
-
-import { PrimaryButton } from "../../../../atoms/Button/Button";
-import {
   Div,
   JustifyContentVariants,
   AlignItemsVariants,
-} from "../../../../atoms/Div/Div";
+  Text,
+  TextAlignVariants,
+  FontWeightVariants,
+  H1,
+  PrimaryButton,
+  Icon,
+} from "../../../../atoms/";
 import { tealGreen, white, Container } from "../../../../../utils";
-import Icon from "../../../../atoms/Icon/Icon";
 function HeroComponent() {
   return (
     <Div backgroundColor={tealGreen[100]}>
@@ -22,16 +20,17 @@ function HeroComponent() {
           justifyContent={JustifyContentVariants.spaceBetween}
           alignItems={AlignItemsVariants.center}
           paddingTop="90"
+          height="768"
         >
-          <Div width="350">
-            <Text
+          <Div flexSize="1">
+            <H1
               color={white[100]}
               size="48"
-              weight={FontWeightVariants.bold}
               lineHeight="0.94"
+              marginBottom="30"
             >
               I am Madhav.
-            </Text>
+            </H1>
             <Text
               color="white"
               size="25"
@@ -43,16 +42,17 @@ function HeroComponent() {
               you around.
             </Text>
           </Div>
-          <Text
+          <H1
+            flexSize="1"
             color="white"
             underlined
             size="164"
             lineHeight="0.93"
-            textAlign={TextAlignVariants.right}
+            align={TextAlignVariants.right}
             weight={FontWeightVariants.bold}
           >
             HELLO.
-          </Text>
+          </H1>
         </Div>
         <Div
           flex

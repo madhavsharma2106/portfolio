@@ -1,7 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 import { normalize } from "polished";
 import { primaryFont } from "./typography";
-import popinsRegular from "../assets/fonts/Poppins-Regular.ttf";
 
 export const GlobalStyle = createGlobalStyle`
 ${normalize()}
@@ -17,6 +16,6 @@ ${normalize()}
     font-family: ${primaryFont}
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
   }
-  
 `;

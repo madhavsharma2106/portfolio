@@ -1,12 +1,16 @@
 import React from "react";
-import { Container, orange } from "../../../../../utils";
+import { Container, orange, black } from "../../../../../utils";
 import {
   Div,
   JustifyContentVariants,
   AlignItemsVariants,
-} from "../../../../atoms/Div/Div";
-import { Text, FontWeightVariants } from "../../../../atoms/Text/Text";
-import Link from "../../../../molecules/Link/Link";
+  FlexDirectionVariants,
+  Text,
+  FontWeightVariants,
+  H3,
+  H1,
+} from "../../../../atoms";
+import { Link, List } from "../../../../molecules/";
 
 function AboutMeComponent() {
   return (
@@ -16,17 +20,18 @@ function AboutMeComponent() {
         justifyContent={JustifyContentVariants.spaceBetween}
         alignItems={AlignItemsVariants.center}
         paddingTop={173}
+        paddingBottom={173}
       >
-        <Div>
-          <Text
+        <Div flexSize="1">
+          <H1
             underlined
-            size="45"
             color={orange[100]}
             weight={FontWeightVariants.bold}
+            marginBottom="48"
           >
             I love Web Technologies.
-          </Text>
-          <Text lineHeight="1.56">
+          </H1>
+          <Text lineHeight="1.56" marginBottom="20">
             Back in 2013, I helped my father build a website for a project he
             had in mind. It took me 3 sleepless nights to set up a site which
             would fail when seen in a different resolution (Who knew about media
@@ -44,7 +49,35 @@ function AboutMeComponent() {
             words.
           </Text>
         </Div>
-        <Div>sdfsdf</Div>
+        <Div flexSize="1">
+          <Div
+            width="75%"
+            backgroundColor={black[300]}
+            flex
+            flexDirection={FlexDirectionVariants.column}
+            alignItems={AlignItemsVariants.center}
+            paddingTop="30"
+            paddingBottom="30"
+            margin="auto"
+          >
+            <H3 color={orange[100]} underlined marginBottom="20">
+              Languages I speak
+            </H3>
+            <List
+              items={[
+                "HTML",
+                "CSS",
+                "React",
+                "Angular",
+                "Javascript / ES6+",
+                "Node",
+                "Mongo",
+                "Kubernetes",
+                "Docker",
+              ]}
+            />
+          </Div>
+        </Div>
       </Div>
     </Container>
   );

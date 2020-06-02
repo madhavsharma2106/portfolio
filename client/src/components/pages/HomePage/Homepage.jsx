@@ -1,7 +1,9 @@
 import React from "react";
-import Page from "../../molecules/Page/Page";
+import { Page } from "../../molecules";
 import HeroComponent from "./components/HeroComponent/HeroComponent";
 import AboutMeComponent from "./components/AboutMeComponent/AboutMeComponent";
+import ProjectsComponent from "./components/ProjectsComponent/ProjectsComponent";
+import BlogsContainer from "./components/BlogsContainer/BlogsContainer";
 function HomePage() {
   return (
     <Page
@@ -10,6 +12,8 @@ function HomePage() {
     >
       <HeroComponent />
       <AboutMeComponent />
+      <ProjectsComponent />
+      <BlogsContainer />
     </Page>
   );
 }
