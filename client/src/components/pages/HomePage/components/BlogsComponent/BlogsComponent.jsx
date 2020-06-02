@@ -7,10 +7,11 @@ import {
   JustifyContentVariants,
   TextAlignVariants,
   Text,
+  Img,
 } from "../../../../atoms";
-import { Container, white, orange } from "../../../../../utils";
+import { Container, orange } from "../../../../../utils";
 
-function BlogsContainer() {
+function BlogsComponent() {
   return (
     <Div paddingTop="80" paddingBottom="80">
       <Container>
@@ -18,9 +19,11 @@ function BlogsContainer() {
           This is my sandbox. <br /> I create sandcastles here.
         </H1>
         <Div flex justifyContent={JustifyContentVariants.spaceBetween}>
-          <Div margin="20px" flexSize={1} pointer>
+          <Div marginRight="20" flexSize={1} pointer>
             <Div>
-              <img src={"../../../../../assets/Images/Blogs/Blog-1.jpg"} />
+              <Img
+                src={require("../../../../../assets/Images/Blogs/Blog-1.jpg")}
+              />
               <H3 marginBottom="10">
                 What Web developers get wrong about Alt text.
               </H3>
@@ -30,9 +33,11 @@ function BlogsContainer() {
               </Text>
             </Div>
           </Div>
-          <Div margin="20px" flexSize={1} pointer>
+          <Div marginRight="20" flexSize={1} pointer>
             <Div>
-              <img src={"../../../../../assets/Images/Blogs/Blog-1.jpg"} />
+              <Img
+                src={require("../../../../../assets/Images/Blogs/Blog-1.jpg")}
+              />
               <H3 marginBottom="10">
                 What Web developers get wrong about Alt text.
               </H3>
@@ -42,9 +47,11 @@ function BlogsContainer() {
               </Text>
             </Div>
           </Div>
-          <Div margin="20px" flexSize={1} pointer>
+          <Div flexSize={1} pointer>
             <Div>
-              <img src={"../../../../../assets/Images/Blogs/Blog-1.jpg"} />
+              <Img
+                src={require("../../../../../assets/Images/Blogs/Blog-1.jpg")}
+              />
               <H3 marginBottom="10">
                 What Web developers get wrong about Alt text.
               </H3>
@@ -63,4 +70,4 @@ function BlogsContainer() {
   );
 }
 
-export default BlogsContainer;
+export default BlogsComponent;

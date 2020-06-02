@@ -8,6 +8,7 @@ import {
   TertiaryButton,
   JustifyContentVariants,
   TextAlignVariants,
+  Img,
 } from "../../../../atoms";
 function ProjectsComponent() {
   return (
@@ -17,10 +18,10 @@ function ProjectsComponent() {
           This is my sandbox. <br /> I create sandcastles here.
         </H1>
         <Div flex justifyContent={JustifyContentVariants.spaceBetween}>
-          <Div margin="20px" flexSize={1} pointer>
+          <Div marginRight="20" flexSize={1} pointer>
             <Div color={white[100]}>
-              <img
-                src={"../../../../../assets/Images/Projects/Project-1.jpg"}
+              <Img
+                src={require("../../../../../assets/Images/Projects/Project-1.jpg")}
               />
               <Div marginBottom="10">
                 <H3 inline>Boli //</H3>
@@ -34,10 +35,10 @@ function ProjectsComponent() {
               </Text>
             </Div>
           </Div>
-          <Div margin="20px" flexSize={1} pointer>
+          <Div marginRight="20" flexSize={1} pointer>
             <Div color={white[100]}>
-              <img
-                src={"../../../../../assets/Images/Projects/Project-1.jpg"}
+              <Img
+                src={require("../../../../../assets/Images/Projects/Project-1.jpg")}
               />
               <Div marginBottom="10">
                 <H3 inline>Boli //</H3>
@@ -51,10 +52,10 @@ function ProjectsComponent() {
               </Text>
             </Div>
           </Div>
-          <Div margin="20px" flexSize={1} pointer>
+          <Div flexSize={1} pointer>
             <Div color={white[100]}>
-              <img
-                src={"../../../../../assets/Images/Projects/Project-1.jpg"}
+              <Img
+                src={require("../../../../../assets/Images/Projects/Project-1.jpg")}
               />
               <Div marginBottom="10">
                 <H3 inline>Boli //</H3>

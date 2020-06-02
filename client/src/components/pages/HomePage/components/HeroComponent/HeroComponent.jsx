@@ -13,14 +13,13 @@ import {
 import { tealGreen, white, Container } from "../../../../../utils";
 function HeroComponent() {
   return (
-    <Div backgroundColor={tealGreen[100]}>
+    <Div backgroundColor={tealGreen[100]} paddingTop="200">
       <Container>
         <Div
           flex
           justifyContent={JustifyContentVariants.spaceBetween}
           alignItems={AlignItemsVariants.center}
           paddingTop="90"
-          height="768"
         >
           <Div flexSize="1">
             <H1
@@ -58,7 +57,7 @@ function HeroComponent() {
           flex
           justifyContent={JustifyContentVariants.spaceBetween}
           alignItems={AlignItemsVariants.center}
-          marginTop={30}
+          marginTop={200}
           paddingBottom={100}
         >
           <Div>

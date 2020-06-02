@@ -3,7 +3,8 @@ import { Page } from "../../molecules";
 import HeroComponent from "./components/HeroComponent/HeroComponent";
 import AboutMeComponent from "./components/AboutMeComponent/AboutMeComponent";
 import ProjectsComponent from "./components/ProjectsComponent/ProjectsComponent";
-import BlogsContainer from "./components/BlogsContainer/BlogsContainer";
+import BlogsComponent from "./components/BlogsComponent/BlogsComponent";
+import { Footer } from "../../organisms";
 function HomePage() {
   return (
     <Page
@@ -13,7 +14,8 @@ function HomePage() {
       <HeroComponent />
       <AboutMeComponent />
       <ProjectsComponent />
-      <BlogsContainer />
+      <BlogsComponent />
+      <Footer />
     </Page>
   );
 }
