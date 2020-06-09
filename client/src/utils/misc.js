@@ -36,8 +36,14 @@ export const checkIfPercentageOrPixel = (val) => {
 export const enableHeightProps = ({ height }) =>
   height && `height: ${checkIfPercentageOrPixel(height)};`;
 
-export const enableWidthProps = ({ width }) =>
-  width && `width: ${checkIfPercentageOrPixel(width)};`;
+export const enableWidthProps = ({ width, maxWidth, minWidth }) => css`
+  width: ${width && checkIfPercentageOrPixel(width)};
+  max-width: ${maxWidth && checkIfPercentageOrPixel(maxWidth)};
+  min-width: ${minWidth && checkIfPercentageOrPixel(minWidth)};
+`;
+
+// export const enableWidthProps = ({ width }) =>
+// width && `width: ${checkIfPercentageOrPixel(width)};`;
 
 export const Container = styled.div`
   max-width: 1173px;

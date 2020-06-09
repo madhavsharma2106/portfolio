@@ -14,6 +14,7 @@ import {
   orange,
   meduimBreakpointStyles,
 } from "../../../../../utils";
+import { BlogCard } from "../../../../organisms";
 
 function BlogsComponent() {
   return (
@@ -33,49 +34,32 @@ function BlogsComponent() {
           css={[meduimBreakpointStyles(`flex-direction: column`)]}
         >
           <Div marginRight="20" flexSize={1} pointer>
-            <Div>
-              <Img
-                width="100%"
-                src={require("../../../../../assets/Images/Blogs/Blog-1.jpg")}
-              />
-              <H3 marginBottom="10">
-                What Web developers get wrong about Alt text.
-              </H3>
-              <Text align={TextAlignVariants.justify} lineHeight="1.44">
-                A programming language that speaks Hindi. A fun project I built
-                to understand the inner workings of compilers.
-              </Text>
-            </Div>
+            <BlogCard
+              img={require("../../../../../assets/Images/Blogs/Blog-1.jpg")}
+              summary="A programming language that speaks Hindi. A fun project I built
+                to understand the inner workings of compilers."
+              title="What Web developers get wrong about Alt text."
+              readTime="3"
+            />
+          </Div>
+
+          <Div marginRight="20" flexSize={1} pointer>
+            <BlogCard
+              img={require("../../../../../assets/Images/Blogs/Blog-1.jpg")}
+              summary="A programming language that speaks Hindi. A fun project I built
+                to understand the inner workings of compilers."
+              title="What Web developers get wrong about Alt text."
+              readTime="3"
+            />
           </Div>
           <Div marginRight="20" flexSize={1} pointer>
-            <Div>
-              <Img
-                width="100%"
-                src={require("../../../../../assets/Images/Blogs/Blog-1.jpg")}
-              />
-              <H3 marginBottom="10">
-                What Web developers get wrong about Alt text.
-              </H3>
-              <Text align={TextAlignVariants.justify} lineHeight="1.44">
-                A programming language that speaks Hindi. A fun project I built
-                to understand the inner workings of compilers.
-              </Text>
-            </Div>
-          </Div>
-          <Div flexSize={1} pointer>
-            <Div>
-              <Img
-                width="100%"
-                src={require("../../../../../assets/Images/Blogs/Blog-1.jpg")}
-              />
-              <H3 marginBottom="10">
-                What Web developers get wrong about Alt text.
-              </H3>
-              <Text align={TextAlignVariants.justify} lineHeight="1.44">
-                A programming language that speaks Hindi. A fun project I built
-                to understand the inner workings of compilers.
-              </Text>
-            </Div>
+            <BlogCard
+              img={require("../../../../../assets/Images/Blogs/Blog-1.jpg")}
+              summary="A programming language that speaks Hindi. A fun project I built
+                to understand the inner workings of compilers."
+              title="What Web developers get wrong about Alt text."
+              readTime="3"
+            />
           </Div>
         </Div>
         <Div flex justifyContent={JustifyContentVariants.center}>

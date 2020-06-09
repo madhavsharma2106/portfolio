@@ -46,5 +46,6 @@ export const Div = styled.div`
   ${enablePointer}
   flex: ${({ flexSize }) => flexSize};
   flex-direction: ${({ flexDirection }) => flexDirection};
+  flex-wrap: ${({ flexWrap }) => flexWrap};
   ${enableCss}
 `;
