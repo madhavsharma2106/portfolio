@@ -9,11 +9,19 @@ import {
   Text,
   Img,
 } from "../../../../atoms";
-import { Container, orange } from "../../../../../utils";
+import {
+  Container,
+  orange,
+  meduimBreakpointStyles,
+} from "../../../../../utils";
 
 function BlogsComponent() {
   return (
-    <Div paddingTop="80" paddingBottom="80">
+    <Div
+      paddingTop="80"
+      paddingBottom="80"
+      css={[meduimBreakpointStyles(`padding: 50px`)]}
+    >
       <Container>
         <H1 color={orange[100]} size="48" underlined marginBottom="20">
           This is my sandbox. <br /> I create sandcastles here.
@@ -22,10 +30,12 @@ function BlogsComponent() {
           flex
           justifyContent={JustifyContentVariants.spaceBetween}
           modifiers="medium"
+          css={[meduimBreakpointStyles(`flex-direction: column`)]}
         >
           <Div marginRight="20" flexSize={1} pointer>
             <Div>
               <Img
+                width="100%"
                 src={require("../../../../../assets/Images/Blogs/Blog-1.jpg")}
               />
               <H3 marginBottom="10">
@@ -40,6 +50,7 @@ function BlogsComponent() {
           <Div marginRight="20" flexSize={1} pointer>
             <Div>
               <Img
+                width="100%"
                 src={require("../../../../../assets/Images/Blogs/Blog-1.jpg")}
               />
               <H3 marginBottom="10">
@@ -54,6 +65,7 @@ function BlogsComponent() {
           <Div flexSize={1} pointer>
             <Div>
               <Img
+                width="100%"
                 src={require("../../../../../assets/Images/Blogs/Blog-1.jpg")}
               />
               <H3 marginBottom="10">

@@ -1,6 +1,13 @@
 import React from "react";
 import NewsLetterComponent from "./NewsLetterComponent/NewsLetterComponent";
-import { Container, black, orange, white } from "../../../utils";
+import {
+  Container,
+  black,
+  orange,
+  white,
+  smallBreakpointStyles,
+  meduimBreakpointStyles,
+} from "../../../utils";
 import { Div, Text, TextAlignVariants, H1, Icon } from "../../atoms";
 
 function Footer() {
@@ -9,14 +16,26 @@ function Footer() {
       <NewsLetterComponent />
       <Div backgroundColor={black[100]}>
         <Container paddingTop={133} paddingBottom={133}>
-          <Div flex modifiers={["medium", "columnReverse"]}>
+          <Div
+            flex
+            css={[
+              meduimBreakpointStyles(`padding: 20px`),
+              smallBreakpointStyles(`flex-direction: column-reverse;`),
+            ]}
+          >
             <Div flexSize={3}>
               <H1 color={white[100]} size="30" lineHeight="1.5" underlined>
                 I am always interested in cool stuff. <br /> Do you have a
                 project in mind? Let’s talk.
               </H1>
-              <Div flex marginTop="70">
-                <Div flexSize={1}>
+              <Div
+                flex
+                marginTop="70"
+                css={smallBreakpointStyles(
+                  `flex-direction: column; text-align: center;`
+                )}
+              >
+                <Div flexSize={1} css={smallBreakpointStyles(``)}>
                   <Text color={orange[100]}>Phone</Text>
                   <Text color={white[100]} marginTop="20">
                     (+91) 7022629939
@@ -38,7 +57,7 @@ function Footer() {
                 </Div>
               </Div>
             </Div>
-            <Div flexSize={1}>
+            <Div flexSize={1} css={smallBreakpointStyles(`display: none`)}>
               <Text
                 color={orange[100]}
                 underlined

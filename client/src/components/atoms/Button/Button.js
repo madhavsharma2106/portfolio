@@ -8,6 +8,7 @@ import {
   tealGreen,
   enableMarginProps,
   enablePaddingProps,
+  enableCss,
 } from "../../../utils/index";
 
 const Button = styled.button`
@@ -22,6 +23,7 @@ const Button = styled.button`
   ${enableMarginProps}
   ${enablePaddingProps}
   margin:${({ centered }) => centered && `0 auto`};
+  ${enableCss}
 `;
 
 export const PrimaryButton = styled(Button)`

@@ -1,5 +1,10 @@
 import React from "react";
-import { Container, orange, black } from "../../../../../utils";
+import {
+  Container,
+  orange,
+  black,
+  meduimBreakpointStyles,
+} from "../../../../../utils";
 import {
   Div,
   JustifyContentVariants,
@@ -22,6 +27,9 @@ function AboutMeComponent() {
         paddingTop={173}
         paddingBottom={173}
         modifiers="medium"
+        css={meduimBreakpointStyles(
+          `margin: auto 20px; flex-direction: column; padding: 30px auto;`
+        )}
       >
         <Div flexSize="1">
           <H1
@@ -50,9 +58,13 @@ function AboutMeComponent() {
             words.
           </Text>
         </Div>
-        <Div flexSize="1">
+        <Div
+          flexSize="1"
+          css={meduimBreakpointStyles(`margin-top: 50px; width: 100%;`)}
+        >
           <Div
             width="75%"
+            css={meduimBreakpointStyles(` width: 100%;`)}
             backgroundColor={black[300]}
             flex
             flexDirection={FlexDirectionVariants.column}

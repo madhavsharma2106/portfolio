@@ -1,5 +1,10 @@
 import React from "react";
-import { Container, tealGreen, white } from "../../../../../utils";
+import {
+  Container,
+  tealGreen,
+  white,
+  meduimBreakpointStyles,
+} from "../../../../../utils";
 import {
   H1,
   Div,
@@ -12,7 +17,12 @@ import {
 } from "../../../../atoms";
 function ProjectsComponent() {
   return (
-    <Div backgroundColor={tealGreen[100]} paddingTop="80" paddingBottom="80">
+    <Div
+      backgroundColor={tealGreen[100]}
+      paddingTop="80"
+      paddingBottom="80"
+      css={[meduimBreakpointStyles(`padding: 50px`)]}
+    >
       <Container>
         <H1 color={white[100]} size="48" underlined marginBottom="20">
           This is my sandbox. <br /> I create sandcastles here.
@@ -21,6 +31,7 @@ function ProjectsComponent() {
           flex
           justifyContent={JustifyContentVariants.spaceBetween}
           modifiers="medium"
+          css={[meduimBreakpointStyles(`flex-direction: column`)]}
         >
           <Div marginRight="20" flexSize={1} pointer>
             <Div color={white[100]}>
