@@ -17,7 +17,11 @@ function ProjectsComponent() {
         <H1 color={white[100]} size="48" underlined marginBottom="20">
           This is my sandbox. <br /> I create sandcastles here.
         </H1>
-        <Div flex justifyContent={JustifyContentVariants.spaceBetween}>
+        <Div
+          flex
+          justifyContent={JustifyContentVariants.spaceBetween}
+          modifiers="medium"
+        >
           <Div marginRight="20" flexSize={1} pointer>
             <Div color={white[100]}>
               <Img

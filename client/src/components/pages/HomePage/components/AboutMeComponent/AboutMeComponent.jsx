@@ -21,6 +21,7 @@ function AboutMeComponent() {
         alignItems={AlignItemsVariants.center}
         paddingTop={173}
         paddingBottom={173}
+        modifiers="medium"
       >
         <Div flexSize="1">
           <H1

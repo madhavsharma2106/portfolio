@@ -40,7 +40,7 @@ export const enableWidthProps = ({ width }) =>
   width && `width: ${checkIfPercentageOrPixel(width)};`;
 
 export const Container = styled.div`
-  width: 1173px;
+  max-width: 1173px;
   margin: 0 auto;
   background-color: ${({ backgroundColor }) => backgroundColor};
   ${enableMarginProps}
@@ -48,3 +48,21 @@ export const Container = styled.div`
 `;
 
 export const enablePointer = ({ pointer }) => pointer && `cursor: pointer;`;
+
+export const enableCss = ({ css }) => css;
+
+export const meduimBreakpointStyles = (...styles) => {
+  return `
+    @media (max-width: 768px) {
+        ${styles}
+      } 
+    `;
+};
+
+export const smallBreakpointStyles = (...styles) => {
+  return `
+    @media (max-width: 425px) {
+        ${styles}
+      } 
+    `;
+};

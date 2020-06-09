@@ -9,7 +9,7 @@ function Footer() {
       <NewsLetterComponent />
       <Div backgroundColor={black[100]}>
         <Container paddingTop={133} paddingBottom={133}>
-          <Div flex>
+          <Div flex modifiers={["medium", "columnReverse"]}>
             <Div flexSize={3}>
               <H1 color={white[100]} size="30" lineHeight="1.5" underlined>
                 I am always interested in cool stuff. <br /> Do you have a

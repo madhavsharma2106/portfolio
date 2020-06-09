@@ -1,4 +1,5 @@
 import React from "react";
+
 import {
   Div,
   JustifyContentVariants,
@@ -10,16 +11,31 @@ import {
   PrimaryButton,
   Icon,
 } from "../../../../atoms/";
-import { tealGreen, white, Container } from "../../../../../utils";
+import {
+  tealGreen,
+  white,
+  Container,
+  meduimBreakpointStyles,
+  smallBreakpointStyles,
+} from "../../../../../utils";
+
 function HeroComponent() {
   return (
-    <Div backgroundColor={tealGreen[100]} paddingTop="120">
+    <Div
+      backgroundColor={tealGreen[100]}
+      paddingTop="120"
+      css={meduimBreakpointStyles(`padding: 20px;`)}
+    >
       <Container>
         <Div
           flex
           justifyContent={JustifyContentVariants.spaceBetween}
           alignItems={AlignItemsVariants.center}
           paddingTop="90"
+          css={meduimBreakpointStyles(`
+            flex-direction: column-reverse;
+            align-items: start;
+          `)}
         >
           <Div flexSize="1">
             <H1
@@ -27,6 +43,7 @@ function HeroComponent() {
               size="48"
               lineHeight="0.94"
               marginBottom="30"
+              css={[meduimBreakpointStyles(`margin-top: 50px`)]}
             >
               I am Madhav.
             </H1>
@@ -49,6 +66,7 @@ function HeroComponent() {
             lineHeight="0.93"
             align={TextAlignVariants.right}
             weight={FontWeightVariants.bold}
+            css={smallBreakpointStyles(`font-size: 100px`)}
           >
             HELLO.
           </H1>
@@ -59,14 +77,24 @@ function HeroComponent() {
           alignItems={AlignItemsVariants.center}
           marginTop={200}
           paddingBottom={100}
+          css={smallBreakpointStyles(
+            `flex-direction: column; margin-top: 100px`
+          )}
         >
           <Div>
             <Icon marginRight="16" />
             <Icon marginRight="16" />
             <Icon marginRight="16" />
           </Div>
-          <Div>
-            <PrimaryButton marginRight="16">Download Resume</PrimaryButton>
+          <Div
+            css={smallBreakpointStyles(`
+            button{
+              width: 100%;
+              margin: 8px auto;
+            }
+          `)}
+          >
+            <PrimaryButton margin="16px">Download Resume</PrimaryButton>
             <PrimaryButton>Contact Me</PrimaryButton>
           </Div>
         </Div>

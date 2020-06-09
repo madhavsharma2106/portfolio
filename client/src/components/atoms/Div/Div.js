@@ -5,6 +5,7 @@ import {
   enableHeightProps,
   enableWidthProps,
   enablePointer,
+  enableCss,
 } from "../../../utils";
 
 const baseStyles1 = {
@@ -28,6 +29,8 @@ export const AlignItemsVariants = {
 export const FlexDirectionVariants = {
   row: "row",
   column: "column",
+  rowReverse: "row-reverse",
+  columnReverse: "column-reverse",
 };
 
 export const Div = styled.div`
@@ -43,4 +46,5 @@ export const Div = styled.div`
   ${enablePointer}
   flex: ${({ flexSize }) => flexSize};
   flex-direction: ${({ flexDirection }) => flexDirection};
+  ${enableCss}
 `;

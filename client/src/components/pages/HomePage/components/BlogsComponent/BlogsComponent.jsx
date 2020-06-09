@@ -18,7 +18,11 @@ function BlogsComponent() {
         <H1 color={orange[100]} size="48" underlined marginBottom="20">
           This is my sandbox. <br /> I create sandcastles here.
         </H1>
-        <Div flex justifyContent={JustifyContentVariants.spaceBetween}>
+        <Div
+          flex
+          justifyContent={JustifyContentVariants.spaceBetween}
+          modifiers="medium"
+        >
           <Div marginRight="20" flexSize={1} pointer>
             <Div>
               <Img

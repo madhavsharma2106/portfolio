@@ -7,6 +7,7 @@ import {
   enablePaddingProps,
   enableMarginProps,
   enablePointer,
+  enableCss,
 } from "../../../utils";
 
 export const TextAlignVariants = {
@@ -38,7 +39,8 @@ export const textStyles = css`
   display: ${({ inline }) => inline && "inline"};
   font-weight: ${({ weight }) => weight};
   line-height: ${({ lineHeight }) => lineHeight};
-  letter-spacing: ${({ letterSpacing }) => letterSpacing};
+  letter-spacing: ${({ letterSpacing }) =>
+    letterSpacing && `${letterSpacing}px`};
   text-align: ${({ align }) => align};
   color: ${({ color }) => color};
   flex: ${({ flexSize }) => flexSize};
@@ -49,7 +51,7 @@ export const textStyles = css`
   ${enablePaddingProps}
   ${enableMarginProps}
   ${enablePointer}
-
+  ${enableCss}
 `;
 
 export const Text = styled.p`
